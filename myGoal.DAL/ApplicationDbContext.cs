@@ -21,7 +21,4 @@ public class ApplicationDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
-
-    public DbSet<User> Users { get; set; }
-
 }
