@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myGoal.Api", "myGoal.Api\my
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myGoal.Domain", "myGoal.Domain\myGoal.Domain.csproj", "{799BE35F-C527-4935-81A9-B67B516C6987}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myGoal.DAL", "myGoal.DAL\myGoal.DAL.csproj", "{8531E9F1-56EC-4810-9B86-7FD1F7257967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{627251BF-3865-4FC8-9F74-CC7C3B687339} = {E7597515-220B-412B-BE4C-CE583B37B2A5}
 		{799BE35F-C527-4935-81A9-B67B516C6987} = {7639D943-DD0C-4EE0-A75B-7ACED0F76F7F}
+		{8531E9F1-56EC-4810-9B86-7FD1F7257967} = {2A676E0A-E18A-4EFD-A434-3A77BD076049}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{627251BF-3865-4FC8-9F74-CC7C3B687339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,5 +31,9 @@ Global
 		{799BE35F-C527-4935-81A9-B67B516C6987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{799BE35F-C527-4935-81A9-B67B516C6987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{799BE35F-C527-4935-81A9-B67B516C6987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8531E9F1-56EC-4810-9B86-7FD1F7257967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8531E9F1-56EC-4810-9B86-7FD1F7257967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8531E9F1-56EC-4810-9B86-7FD1F7257967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8531E9F1-56EC-4810-9B86-7FD1F7257967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
