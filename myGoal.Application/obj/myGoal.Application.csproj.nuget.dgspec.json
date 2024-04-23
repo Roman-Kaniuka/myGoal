@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Api\\myGoal.Api.csproj": {}
+    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\myGoal.Application.csproj": {}
   },
   "projects": {
-    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Api\\myGoal.Api.csproj": {
+    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\myGoal.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Api\\myGoal.Api.csproj",
-        "projectName": "myGoal.Api",
-        "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Api\\myGoal.Api.csproj",
+        "projectUniqueName": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\myGoal.Application.csproj",
+        "projectName": "myGoal.Application",
+        "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\myGoal.Application.csproj",
         "packagesPath": "C:\\Users\\kaniu\\.nuget\\packages\\",
-        "outputPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Api\\obj\\",
+        "outputPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaniu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -30,6 +30,9 @@
             "projectReferences": {
               "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj": {
                 "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj"
+              },
+              "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj": {
+                "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj"
               }
             }
           }
@@ -44,13 +47,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.0, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Serilog": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[3.1.1, )"
             }
           },
           "imports": [
@@ -65,9 +68,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
