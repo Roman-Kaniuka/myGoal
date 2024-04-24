@@ -7,16 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Mapping\" />
-      <Folder Include="Validations\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\myGoal.DAL\myGoal.DAL.csproj" />
       <ProjectReference Include="..\myGoal.Domain\myGoal.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
       <PackageReference Include="Serilog" Version="3.1.1" />
     </ItemGroup>

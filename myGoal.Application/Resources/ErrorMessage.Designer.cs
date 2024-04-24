@@ -69,11 +69,38 @@ namespace myGoal.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Звіт з такою назвою вже існує.
+        /// </summary>
+        internal static string ReportAlreadyExists {
+            get {
+                return ResourceManager.GetString("ReportAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Звіт не знайдені.
+        /// </summary>
+        internal static string ReportNotFound {
+            get {
+                return ResourceManager.GetString("ReportNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Звіти не знайдені.
         /// </summary>
         internal static string ReportsNotFound {
             get {
                 return ResourceManager.GetString("ReportsNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Користувач не був знайдений.
+        /// </summary>
+        internal static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
     }

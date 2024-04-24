@@ -24,4 +24,13 @@
     <data name="ReportsNotFound" xml:space="preserve">
         <value>Звіти не знайдені</value>
     </data>
+    <data name="ReportNotFound" xml:space="preserve">
+        <value>Звіт не знайдені</value>
+    </data>
+    <data name="ReportAlreadyExists" xml:space="preserve">
+        <value>Звіт з такою назвою вже існує</value>
+    </data>
+    <data name="UserNotFound" xml:space="preserve">
+        <value>Користувач не був знайдений</value>
+    </data>
 </root>
