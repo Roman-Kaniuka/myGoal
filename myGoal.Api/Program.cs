@@ -1,3 +1,4 @@
+using myGoal.Application.DependencyInjection;
 using myGoal.DAL.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 builder.Services.AddDataAccesLayer(builder.Configuration);
+builder.Services.AddApplication();
 
 if (app.Environment.IsDevelopment())
 {
