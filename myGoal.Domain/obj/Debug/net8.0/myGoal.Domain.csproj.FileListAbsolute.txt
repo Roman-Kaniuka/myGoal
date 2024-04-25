@@ -1,0 +1,12 @@
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.deps.json
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.pdb
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.AssemblyInfoInputs.cache
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.AssemblyInfo.cs
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.csproj.CoreCompileInputs.cache
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.sourcelink.json
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\refint\myGoal.Domain.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.pdb
+D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\ref\myGoal.Domain.dll

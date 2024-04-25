@@ -1,0 +1,16 @@
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\bin\Debug\net8.0\myGoal.DAL.deps.json
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\bin\Debug\net8.0\myGoal.DAL.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\bin\Debug\net8.0\myGoal.DAL.pdb
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\bin\Debug\net8.0\myGoal.Domain.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\bin\Debug\net8.0\myGoal.Domain.pdb
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.csproj.AssemblyReference.cache
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.AssemblyInfoInputs.cache
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.AssemblyInfo.cs
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.csproj.CoreCompileInputs.cache
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.sourcelink.json
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.csproj.CopyComplete
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\refint\myGoal.DAL.dll
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\myGoal.DAL.pdb
+D:\Р\C#\myProjecks\myGoal\myGoal.DAL\obj\Debug\net8.0\ref\myGoal.DAL.dll
