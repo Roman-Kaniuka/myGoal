@@ -10,3 +10,15 @@ D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.dll
 D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\refint\myGoal.Domain.dll
 D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.pdb
 D:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\ref\myGoal.Domain.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.deps.json
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\bin\Debug\net8.0\myGoal.Domain.pdb
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.AssemblyInfoInputs.cache
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.AssemblyInfo.cs
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.csproj.CoreCompileInputs.cache
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.sourcelink.json
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\refint\myGoal.Domain.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.pdb
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\ref\myGoal.Domain.dll

@@ -80,9 +80,10 @@ public class ReportService : IReportService
         ReportDto? report;
         try
         {
-            report = await _reportRepositotory.GetAll()
+            report = _reportRepositotory.GetAll()
+                .AsEnumerable()
                 .Select(x => new ReportDto(x.Id, x.Name, x.Description, x.CreateAt.ToLongDateString()))
-                .FirstOrDefaultAsync(x=> x.Id == id);
+                .FirstOrDefault(x=> x.Id == id);
         }
         catch (Exception ex)
         {
@@ -96,7 +97,7 @@ public class ReportService : IReportService
 
         if (report == null)
         {
-            _logger.Warning("Звіт з {id} не знайдено",id);
+            _logger.Warning($"Звіт з {id} не знайдено",id);
             return new BaseResult<ReportDto>()
             {
                 ErrorMessage = ErrorMessage.ReportNotFound,

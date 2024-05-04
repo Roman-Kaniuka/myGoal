@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
+      "projectUniqueName": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
       "projectName": "myGoal.Domain",
-      "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
+      "projectPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
       "packagesPath": "C:\\Users\\kaniu\\.nuget\\packages\\",
-      "outputPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\obj\\",
+      "outputPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kaniu\\AppData\\Roaming\\NuGet\\NuGet.Config",

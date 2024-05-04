@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj": {}
+    "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj": {}
   },
   "projects": {
-    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj": {
+    "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj",
+        "projectUniqueName": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj",
         "projectName": "myGoal.DAL",
-        "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj",
+        "projectPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\myGoal.DAL.csproj",
         "packagesPath": "C:\\Users\\kaniu\\.nuget\\packages\\",
-        "outputPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\obj\\",
+        "outputPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaniu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj": {
-                "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj"
+              "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj": {
+                "projectPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj"
               }
             }
           }
@@ -45,10 +45,6 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
@@ -77,14 +73,14 @@
         }
       }
     },
-    "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj": {
+    "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
+        "projectUniqueName": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
         "projectName": "myGoal.Domain",
-        "projectPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
+        "projectPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\myGoal.Domain.csproj",
         "packagesPath": "C:\\Users\\kaniu\\.nuget\\packages\\",
-        "outputPath": "D:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\obj\\",
+        "outputPath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaniu\\AppData\\Roaming\\NuGet\\NuGet.Config",
