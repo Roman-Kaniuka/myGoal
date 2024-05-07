@@ -18,7 +18,7 @@ namespace myGoal.Domain.Entity;
  
  public long CreateBy { get; set; }
  
- public DateTime UpdateAt { get; set; }
+ public DateTime? UpdateAt { get; set; }
  
- public long UpdateBy { get; set; }
+ public long? UpdateBy { get; set; }
 }

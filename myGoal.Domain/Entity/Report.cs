@@ -22,9 +22,9 @@ public class Report : IEbtityId<long>, IAuditable
     
     public long CreateBy { get; set; }
     
-    public DateTime UpdateAt { get; set; }
+    public DateTime? UpdateAt { get; set; }
     
-    public long UpdateBy { get; set; }
+    public long? UpdateBy { get; set; }
     
 }
 

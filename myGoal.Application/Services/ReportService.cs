@@ -187,7 +187,6 @@ public class ReportService : IReportService
                 ErrorCode = (int)ErrorCodes.InternalServerError
             };
         }
-        throw new NotImplementedException();
     }
 
     public async Task<BaseResult<ReportDto>> UpdateReportAsync(UpdateReportDto dto)
@@ -225,6 +224,5 @@ public class ReportService : IReportService
                 ErrorCode = (int)ErrorCodes.InternalServerError
             };
         }
-        throw new NotImplementedException();
     }
 }
