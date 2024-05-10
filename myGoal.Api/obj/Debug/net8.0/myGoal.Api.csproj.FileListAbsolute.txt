@@ -159,3 +159,5 @@ I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Abstractio
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Http.dll
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\myGoal.Api.xml
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\obj\Debug\net8.0\myGoal.Api.xml

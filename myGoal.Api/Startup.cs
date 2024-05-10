@@ -1,3 +1,4 @@
+using System.Reflection;
 using Asp.Versioning;
 using Microsoft.OpenApi.Models;
 
@@ -67,6 +68,8 @@ public static class Startup
                     Array.Empty<string>()
                 }
             });
+            var xmlFileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFileName));
         });
     }
 }

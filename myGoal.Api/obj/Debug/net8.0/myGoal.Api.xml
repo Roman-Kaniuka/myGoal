@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>myGoal.Api</name>
+    </assembly>
+    <members>
+        <member name="M:myGoal.Api.Controllers.ReportController.GetReport(System.Int64)">
+            <summary>
+            Отримання звіту за id
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                GET
+                {
+                    "id": "1"
+                }
+            </remarks>
+            <response code="200">Якщо звіт був знайдений за id</response>
+            <response code="400">Якщо звіт не був знайдений за id</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.ReportController.GetUserReport(System.Int64)">
+            <summary>
+            Отримання звіту за userId
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                GET
+                {
+                    "userId": "1"
+                }
+            </remarks>
+            <response code="200">Якщо звіт був знайдений за userId</response>
+            <response code="400">Якщо звіт не був знайдений за userId</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.ReportController.DeleteReport(System.Int64)">
+            <summary>
+            Видалення звіту
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                DELTE
+                {
+                    "id": "1"
+                }
+            </remarks>
+            <response code="200">Якщо звіт був видалений</response>
+            <response code="400">Якщо звіт не був видалений</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.ReportController.CreateReport(myGoal.Domain.Dto.Report.CreateReportDto)">
+            <summary>
+            Створення звіту
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                POST
+                {
+                    "name": "Report #1",
+                    "description": "Test report",
+                    "userId": "1"
+                }
+            </remarks>
+            <response code="200">Якщо звіт був створений</response>
+            <response code="400">Якщо звіт не був створений</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.ReportController.UpdateReport(myGoal.Domain.Dto.Report.UpdateReportDto)">
+            <summary>
+            Оновлення звіту
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                PUT
+                {
+                    "id": "1",
+                    "name": "Report #1",
+                    "description": "Test report"
+                }
+            </remarks>
+            <response code="200">Якщо звіт був оновлений</response>
+            <response code="400">Якщо звіт не був оновлений</response>
+        </member>
+        <member name="M:myGoal.Api.Startup.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Підключення Swagger
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>
