@@ -32,8 +32,31 @@ public static class Startup
                     Name = "Roman K."
                 },
             });
-
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+            {
+                In = ParameterLocation.Header,
+                Description = "Введіть валідний токін",
+                Name = "Авторизація",
+                Type = SecuritySchemeType.Http,
+                BearerFormat = "JWT",
+                Scheme = "Bearer"
+            });
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            {
+                {
+                    new OpenApiSecurityScheme()
+                    {
+                        Reference = new OpenApiReference()
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        },
+                        Name = "Bearer",
+                        In = ParameterLocation.Header
+                    },
+                    Array.Empty<string>()
+                }
+            });
         });
     }
-    
 }
