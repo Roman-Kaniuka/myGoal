@@ -32,6 +32,16 @@ public static class Startup
                     Name = "Roman K."
                 },
             });
+            options.SwaggerDoc("v2",new OpenApiInfo()
+            {
+                Version = "v2",
+                Title = "myGoal.Api",
+                Description = "This is Test version 2.0",
+                Contact = new OpenApiContact()
+                {
+                    Name = "Roman K."
+                },
+            });
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
             {
                 In = ParameterLocation.Header,
