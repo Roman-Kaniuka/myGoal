@@ -1,3 +1,4 @@
+using myGoal.Api;
 using myGoal.Application.DependencyInjection;
 using myGoal.DAL.DependencyInjection;
 using Serilog;
@@ -5,8 +6,7 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwagger();
 
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 

@@ -155,3 +155,7 @@ I:\Р\C#\myProjecks\myGoal\myGoal.Api\obj\Debug\net8.0\refint\myGoal.Api.dll
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\obj\Debug\net8.0\myGoal.Api.pdb
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\obj\Debug\net8.0\myGoal.Api.genruntimeconfig.cache
 I:\Р\C#\myProjecks\myGoal\myGoal.Api\obj\Debug\net8.0\ref\myGoal.Api.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Http.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll

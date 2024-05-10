@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using myGoal.Domain.Dto.Report;
 using myGoal.Domain.Entity;
@@ -7,7 +8,8 @@ using myGoal.Domain.Result;
 namespace myGoal.Api.Controllers;
 
 [ApiController]
-[Route("api/v1/[controller]")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class ReportController : ControllerBase
 {
     private readonly IReportService _reportService;
