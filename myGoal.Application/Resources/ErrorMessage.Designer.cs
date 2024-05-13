@@ -69,6 +69,15 @@ namespace myGoal.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Невірні паролі.
+        /// </summary>
+        internal static string PasswordNotEqualsPasswordConfirm {
+            get {
+                return ResourceManager.GetString("PasswordNotEqualsPasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Звіт з такою назвою вже існує.
         /// </summary>
         internal static string ReportAlreadyExists {
@@ -92,6 +101,15 @@ namespace myGoal.Application.Resources {
         internal static string ReportsNotFound {
             get {
                 return ResourceManager.GetString("ReportsNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Користувач вже існує.
+        /// </summary>
+        internal static string UserAlreadyExists {
+            get {
+                return ResourceManager.GetString("UserAlreadyExists", resourceCulture);
             }
         }
         

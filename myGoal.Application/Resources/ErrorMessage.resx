@@ -33,4 +33,10 @@
     <data name="UserNotFound" xml:space="preserve">
         <value>Користувач не був знайдений</value>
     </data>
+    <data name="PasswordNotEqualsPasswordConfirm" xml:space="preserve">
+        <value>Невірні паролі</value>
+    </data>
+    <data name="UserAlreadyExists" xml:space="preserve">
+        <value>Користувач вже існує</value>
+    </data>
 </root>

@@ -2,11 +2,17 @@ namespace myGoal.Domain.Enum;
 
 public enum ErrorCodes
 {
-    //Report 1-10
+    //Report 1-9
     ReportsNotFound = 0,
     ReportNotFound = 1,
     ReportAlreadyExists = 2,
+    
+    InternalServerError = 10, 
+    
     //User 11-20
     UserNotFound = 11,
-    InternalServerError = 10,
+    UserAlreadyExists =12,
+    
+    PasswordNotEqualsPasswordConfirm = 21,
+    
 }

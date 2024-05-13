@@ -26,4 +26,10 @@
     <data name="UserNotFound" xml:space="preserve">
         <value>UserNotFound</value>
     </data>
+    <data name="PasswordNotEqualsPasswordConfirm" xml:space="preserve">
+        <value>Password not equals password confirm</value>
+    </data>
+    <data name="UserAlreadyExists" xml:space="preserve">
+        <value>User already exists</value>
+    </data>
 </root>

@@ -88,6 +88,12 @@
             <response code="200">Якщо звіт був оновлений</response>
             <response code="400">Якщо звіт не був оновлений</response>
         </member>
+        <member name="M:myGoal.Api.Startup.AddAuthenticationAndAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Підключення аутентифікації та авторизації
+            </summary>
+            <param name="services"></param>
+        </member>
         <member name="M:myGoal.Api.Startup.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Підключення Swagger
