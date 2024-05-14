@@ -32,4 +32,7 @@
     <data name="UserAlreadyExists" xml:space="preserve">
         <value>Користувач вже існує</value>
     </data>
+    <data name="PasswordIsWrong" xml:space="preserve">
+        <value>Невірний пароль</value>
+    </data>
 </root>

@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using AutoMapper;
@@ -9,7 +10,6 @@ using myGoal.Domain.Entity;
 using myGoal.Domain.Enum;
 using myGoal.Domain.Interfaces.Repositories;
 using myGoal.Domain.Interfaces.Services;
-using myGoal.Domain.Interfaces.Validations;
 using myGoal.Domain.Result;
 using Serilog;
 
@@ -18,16 +18,20 @@ namespace myGoal.Application.Services;
 public class AuthService : IAuthService
 {
     private readonly IBaseRepository<User> _userRepository;
-    private readonly ILogger _logger;
-    private readonly IBaseValidator<User> _baseValidator;
+    private readonly IBaseRepository<UserToken> _userTokenRepository;
+    private readonly ITokenService _tokenService;
     private readonly IMapper _mapper;
+    private readonly ILogger _logger;
     
     
-    public AuthService(IBaseRepository<User> userRepository, ILogger logger, IMapper mapper)
+    public AuthService(IBaseRepository<User> userRepository, ILogger logger, IMapper mapper, 
+        IBaseRepository<UserToken> userTokenRepository, ITokenService tokenService)
     {
         _userRepository = userRepository;
         _logger = logger;
         _mapper = mapper;
+        _userTokenRepository = userTokenRepository;
+        _tokenService = tokenService;
     }
 
     public async Task<BaseResult<UserDto>> Register(RegisterUserDto dto)
@@ -66,6 +70,7 @@ public class AuthService : IAuthService
                 Date =  _mapper.Map<UserDto>(user)
             };
         }
+        
         catch (Exception ex)
         {
             _logger.Error(ex, ex.Message);
@@ -77,14 +82,86 @@ public class AuthService : IAuthService
         }
     }
 
-    public Task<BaseResult<TokenDto>> Login(LoginUserDto dto)
+    public async Task<BaseResult<TokenDto>> Login(LoginUserDto dto)
     {
-        throw new NotImplementedException();
-    }
+        try
+        {
+            var user = await _userRepository.GetAll().FirstOrDefaultAsync(u => u.Login == dto.Login);
+            if (user == null)
+            {
+                return new BaseResult<TokenDto>()
+                {
+                    ErrorMessage = ErrorMessage.UserNotFound,
+                    ErrorCode = (int)ErrorCodes.UserNotFound
+                };
+            }
 
+            if (!IsVerifyPassword(user.Password, dto.Password))
+            {
+                return new BaseResult<TokenDto>()
+                {
+                    ErrorMessage = ErrorMessage.PasswordIsWrong,
+                    ErrorCode = (int)ErrorCodes.PasswordIsWrong
+                };
+            }
+            
+            var userToken = await _userTokenRepository.GetAll().FirstOrDefaultAsync(x => x.UserId == user.Id);
+
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, user.Login),
+                new Claim(ClaimTypes.Role,"user")
+
+            };
+            
+            var accessToken = _tokenService.GenerateAccessToken(claims);
+            var refreshToken = _tokenService.GenerateRefreshToken();
+            
+            if (userToken == null)
+            {
+                userToken = new UserToken()
+                {
+                    UserId = user.Id,
+                    RefreshToken = refreshToken,
+                    RefreshTokenExpiryTime = DateTime.Now.AddDays(7)
+                };
+                await _userTokenRepository.CreateAsync(userToken);
+            }
+            
+            else
+            {
+                userToken.RefreshToken = refreshToken;
+                userToken.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+            }
+
+            return new BaseResult<TokenDto>()
+            {
+                Date = new TokenDto()
+                {
+                    AccessToken = accessToken,
+                    RefreshToken = refreshToken,
+                }
+            };
+        }
+        
+        catch (Exception ex)
+        {
+            _logger.Error(ex, ex.Message);
+            return new BaseResult<TokenDto>()
+            {
+                ErrorMessage = ErrorMessage.InternalServerError,
+                ErrorCode = (int)ErrorCodes.InternalServerError
+            };
+        }
+    }
     private string HashPassword(string password)
     {
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(password));
         return BitConverter.ToString(bytes).ToLower();
+    }
+    private bool IsVerifyPassword(string userPasswordHash, string userPassword)
+    {
+        var hash = HashPassword(userPassword);
+        return hash == userPasswordHash;
     }
 }

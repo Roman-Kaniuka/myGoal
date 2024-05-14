@@ -69,6 +69,15 @@ namespace myGoal.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Невірний пароль.
+        /// </summary>
+        internal static string PasswordIsWrong {
+            get {
+                return ResourceManager.GetString("PasswordIsWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Невірні паролі.
         /// </summary>
         internal static string PasswordNotEqualsPasswordConfirm {

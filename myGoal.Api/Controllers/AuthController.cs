@@ -42,6 +42,12 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult<BaseResult<TokenDto>>> Login([FromBody] LoginUserDto dto)
     {
+        var response = await _authService.Login(dto);
+        if (response.IsSeccess)
+        {
+            return Ok();
+        }
+
         return BadRequest();
     }
 }

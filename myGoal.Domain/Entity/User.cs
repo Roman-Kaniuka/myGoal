@@ -13,6 +13,9 @@ namespace myGoal.Domain.Entity;
 
  public  List<Report> Reports { get; set; }
  
+
+ public UserToken UserToken { get; set; }
+ 
  
  public DateTime CreateAt { get; set; }
  

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M3DGPtUnKbSF1CDYzA1uZgTdUt2XUCHi9Bu4z69SPThlgaOQMYZ3EK1P+HcD3ryWAN0dSHJ2kaDE5Q9rJtTYiQ==",
+  "dgSpecHash": "DI7P5yp/++eOuGJ3phbhiUwMqx0BSPjABHdwer4D5/4pGeBA+BAFMHBC2TGtsv5NLCCU+wAkult9IZKIBvVI8g==",
   "success": true,
   "projectFilePath": "I:\\Р\\C#\\myProjecks\\myGoal\\myGoal.Application\\myGoal.Application.csproj",
   "expectedPackageFiles": [
@@ -22,9 +22,14 @@
     "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.1.2\\microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.identitymodel.logging\\7.1.2\\microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\kaniu\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512",
     "C:\\Users\\kaniu\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.0\\npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
-    "C:\\Users\\kaniu\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512"
+    "C:\\Users\\kaniu\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
   ],
   "logs": []
 }
