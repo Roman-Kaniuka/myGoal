@@ -12,8 +12,9 @@ public enum ErrorCodes
     //User 11-20
     UserNotFound = 11,
     UserAlreadyExists =12,
-    PasswordIsWrong = 13,
     
+    //Password 21-30
     PasswordNotEqualsPasswordConfirm = 21,
+    PasswordIsWrong = 22,
     
 }
