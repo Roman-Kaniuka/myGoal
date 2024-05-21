@@ -45,9 +45,9 @@ public class AuthController : ControllerBase
         var response = await _authService.Login(dto);
         if (response.IsSeccess)
         {
-            return Ok();
+            return Ok(response);
         }
 
-        return BadRequest();
+        return BadRequest(response);
     }
 }

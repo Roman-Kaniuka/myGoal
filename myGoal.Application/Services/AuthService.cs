@@ -123,7 +123,7 @@ public class AuthService : IAuthService
                 {
                     UserId = user.Id,
                     RefreshToken = refreshToken,
-                    RefreshTokenExpiryTime = DateTime.Now.AddDays(7)
+                    RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7)
                 };
                 await _userTokenRepository.CreateAsync(userToken);
             }
@@ -131,7 +131,9 @@ public class AuthService : IAuthService
             else
             {
                 userToken.RefreshToken = refreshToken;
-                userToken.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+                userToken.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+
+                await _userTokenRepository.UpdateAsync(userToken);
             }
 
             return new BaseResult<TokenDto>()

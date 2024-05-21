@@ -8,6 +8,7 @@ namespace myGoal.Api.Controllers;
 /// 
 /// </summary>
 [ApiController]
+[Route("refresh")]
 public class TokenController : ControllerBase
 {
     private readonly ITokenService _tokenService;

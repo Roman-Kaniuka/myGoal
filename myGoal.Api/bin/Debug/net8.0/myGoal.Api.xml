@@ -4,6 +4,20 @@
         <name>myGoal.Api</name>
     </assembly>
     <members>
+        <member name="M:myGoal.Api.Controllers.AuthController.Register(myGoal.Domain.Dto.User.RegisterUserDto)">
+            <summary>
+            Реєстрація користувача
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:myGoal.Api.Controllers.AuthController.Login(myGoal.Domain.Dto.User.LoginUserDto)">
+            <summary>
+            Авторизація користувача
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:myGoal.Api.Controllers.ReportController.GetReport(System.Int64)">
             <summary>
             Отримання звіту за id
@@ -87,6 +101,11 @@
             </remarks>
             <response code="200">Якщо звіт був оновлений</response>
             <response code="400">Якщо звіт не був оновлений</response>
+        </member>
+        <member name="T:myGoal.Api.Controllers.TokenController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:myGoal.Api.Startup.AddAuthenticationAndAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
             <summary>
