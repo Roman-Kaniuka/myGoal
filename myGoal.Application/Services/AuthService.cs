@@ -159,7 +159,7 @@ public class AuthService : IAuthService
     private string HashPassword(string password)
     {
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(password));
-        return BitConverter.ToString(bytes).ToLower();
+        return Convert.ToBase64String(bytes);
     }
     private bool IsVerifyPassword(string userPasswordHash, string userPassword)
     {
