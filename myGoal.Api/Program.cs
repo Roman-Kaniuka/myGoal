@@ -1,4 +1,5 @@
 using myGoal.Api;
+using myGoal.Api.Middlewares;
 using myGoal.Application.DependencyInjection;
 using myGoal.DAL.DependencyInjection;
 using myGoal.Domain.Settings;
@@ -20,6 +21,8 @@ builder.Services.AddApplication();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -30,6 +33,8 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty;
     });
 }
+
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 app.MapControllers();
