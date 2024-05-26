@@ -13,6 +13,8 @@ namespace myGoal.Domain.Entity;
 
  public  List<Report> Reports { get; set; }
  
+ public  List<Role> Roles { get; set; }
+ 
 
  public UserToken UserToken { get; set; }
  
