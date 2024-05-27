@@ -6,6 +6,7 @@ using myGoal.Application.Validations;
 using myGoal.Application.Validations.FluentValidations;
 using myGoal.Application.Validations.FluentValidations.Report;
 using myGoal.Domain.Dto.Report;
+using myGoal.Domain.Entity;
 using myGoal.Domain.Interfaces.Repositories;
 using myGoal.Domain.Interfaces.Services;
 using myGoal.Domain.Interfaces.Validations;
@@ -30,5 +31,6 @@ public static class DependencyInjection
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IReportService, ReportService>();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IRoleService, RoleService>();
     }
 }
