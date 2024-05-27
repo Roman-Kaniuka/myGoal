@@ -1,5 +1,7 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using myGoal.Application.Resources;
+using myGoal.Domain.Dto.Report;
 using myGoal.Domain.Dto.Role;
 using myGoal.Domain.Entity;
 using myGoal.Domain.Enum;
@@ -13,19 +15,21 @@ public class RoleService : IRoleService
 {
     private readonly IBaseRepository<Role> _roleRepository;
     private readonly IBaseRepository<User> _userRepository;
+    private readonly IMapper _mapper;
 
-    public RoleService(IBaseRepository<Role> roleRepository, IBaseRepository<User> userRepository)
+    public RoleService(IBaseRepository<Role> roleRepository, IBaseRepository<User> userRepository, IMapper mapper)
     {
         _roleRepository = roleRepository;
         _userRepository = userRepository;
+        _mapper = mapper;
     }
 
-    public async Task<BaseResult<Role>> CreateRoleAsync(RoleDto dto)
+    public async Task<BaseResult<RoleDto>> CreateRoleAsync(CreateRoleDto dto)
     {
         var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Name == dto.Name);
         if (role != null)
         {
-            return new BaseResult<Role>()
+            return new BaseResult<RoleDto>()
             {
                 ErrorMessage = ErrorMessage.RoleAlreadyExists,
                 ErrorCode = (int)ErrorCodes.RoleAlreadyExists
@@ -38,18 +42,18 @@ public class RoleService : IRoleService
         };
         
         await _roleRepository.CreateAsync(role);
-        return new BaseResult<Role>()
+        return new BaseResult<RoleDto>()
         {
-            Date = role
+            Date = _mapper.Map<RoleDto>(role)
         };
     }
 
-    public async Task<BaseResult<Role>> DeleteRoleAsync(long id)
+    public async Task<BaseResult<RoleDto>> DeleteRoleAsync(long id)
     {
         var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Id == id);
         if (role ==null)
         {
-            return new BaseResult<Role>()
+            return new BaseResult<RoleDto>()
             {
                 ErrorMessage = ErrorMessage.RoleNotFound,
                 ErrorCode = (int)ErrorCodes.RoleNotFound
@@ -57,18 +61,18 @@ public class RoleService : IRoleService
         }
         
         await _roleRepository.RemoveAsync(role);
-        return new BaseResult<Role>()
+        return new BaseResult<RoleDto>()
         {
-            Date = role
+            Date = _mapper.Map<RoleDto>(role)
         };
     }
 
-    public async Task<BaseResult<Role>> UpdateRoleAsync(RoleDto dto)
+    public async Task<BaseResult<RoleDto>> UpdateRoleAsync(RoleDto dto)
     {
         var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Id == dto.Id);
         if (role == null)
         {
-            return new BaseResult<Role>()
+            return new BaseResult<RoleDto>()
             {
                 ErrorMessage = ErrorMessage.RoleNotFound,
                 ErrorCode = (int)ErrorCodes.RoleNotFound
@@ -77,9 +81,9 @@ public class RoleService : IRoleService
 
         role.Name = dto.Name;
         await _roleRepository.UpdateAsync(role);
-        return new BaseResult<Role>()
+        return new BaseResult<RoleDto>()
         {
-            Date = role
+            Date = _mapper.Map<RoleDto>(role)
         };
     }
 }

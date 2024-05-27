@@ -39,7 +39,7 @@ public class RoleController : ControllerBase
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<BaseResult<Role>>> CreateRole([FromBody]RoleDto dto)
+    public async Task<ActionResult<BaseResult<Role>>> CreateRole([FromBody]CreateRoleDto dto)
     {
         var response = await _roleService.CreateRoleAsync(dto);
         if (response.IsSeccess)
