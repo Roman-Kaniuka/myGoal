@@ -26,7 +26,7 @@ public class RepornConfiguration : IEntityTypeConfiguration<Report>
             },
             new Report()
             {
-                Id = 1,
+                Id = 2,
                 Name = "test Dima",
                 Description = "test",
                 UserId = 2,

@@ -102,6 +102,55 @@
             <response code="200">Якщо звіт був оновлений</response>
             <response code="400">Якщо звіт не був оновлений</response>
         </member>
+        <member name="M:myGoal.Api.Controllers.RoleController.CreateRole(myGoal.Domain.Dto.Role.RoleDto)">
+            <summary>
+            Створення ролі
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                POST
+                {
+                    "name": "Admin",
+                }
+            </remarks>
+            <response code="200">Якщо роль було створено</response>
+            <response code="400">Якщо роль не було створено</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.RoleController.DeleteRole(System.Int64)">
+            <summary>
+            Видалення ролі
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                DELETE
+                {
+                    "id": "1"
+                }
+            </remarks>
+            <response code="200">Якщо роль було видалено</response>
+            <response code="400">Якщо роль не було видалено</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.RoleController.UpdateRole(myGoal.Domain.Dto.Role.RoleDto)">
+            <summary>
+            Оновлення ролі
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                PUT
+                {
+                    "id": "1",
+                    "name": "Admin",
+                }
+            </remarks>
+            <response code="200">Якщо роль була оновлена</response>
+            <response code="400">Якщо роль не була оновлена</response>
+        </member>
         <member name="T:myGoal.Api.Controllers.TokenController">
             <summary>
             
