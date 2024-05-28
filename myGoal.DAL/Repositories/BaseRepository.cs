@@ -22,30 +22,32 @@ public class BaseRepository <TEntity> : IBaseRepository<TEntity> where TEntity :
             throw new ArgumentNullException("Entity is null");
 
         await _dbContext.AddAsync(entity);
-        await _dbContext.SaveChangesAsync();
         
         return entity;
     }
 
-    public async Task<TEntity> UpdateAsync(TEntity entity)
+    public TEntity Update(TEntity entity)
     {
         if (entity == null)
             throw new ArgumentNullException("Entity is null");
 
         _dbContext.Update(entity);
-        await _dbContext.SaveChangesAsync();
         
         return entity;
     }
 
-    public async Task<TEntity> RemoveAsync(TEntity entity)
+    public TEntity Remove(TEntity entity)
     {
         if (entity == null)
             throw new ArgumentNullException("Entity is null");
 
         _dbContext.Remove(entity);
-        await _dbContext.SaveChangesAsync();
 
         return entity;
+    }
+
+    public async Task<int> SaveChangesAsync()
+    {
+        return await _dbContext.SaveChangesAsync();
     }
 }

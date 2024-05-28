@@ -22,3 +22,4 @@ I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.dll
 I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\refint\myGoal.Domain.dll
 I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.pdb
 I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\ref\myGoal.Domain.dll
+I:\Р\C#\myProjecks\myGoal\myGoal.Domain\obj\Debug\net8.0\myGoal.Domain.csproj.AssemblyReference.cache

@@ -1,12 +1,13 @@
+using myGoal.Domain.Interfaces.Repositories.DataBases;
+
 namespace myGoal.Domain.Interfaces.Repositories;
 
-public interface IBaseRepository <TEntity>
+public interface IBaseRepository <TEntity> : IStateSaveChanges
 {
     IQueryable<TEntity> GetAll();
     
     Task<TEntity> CreateAsync(TEntity entity);
 
-    Task<TEntity> UpdateAsync(TEntity entity);
-
-    Task<TEntity> RemoveAsync(TEntity entity);
+    TEntity Update(TEntity entity);
+    TEntity Remove(TEntity entity);
 }

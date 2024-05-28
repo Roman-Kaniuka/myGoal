@@ -5,6 +5,7 @@ using myGoal.DAL.Interceptor;
 using myGoal.DAL.Repositories;
 using myGoal.Domain.Entity;
 using myGoal.Domain.Interfaces.Repositories;
+using myGoal.Domain.Interfaces.Repositories.DataBases;
 
 namespace myGoal.DAL.DependencyInjection;
 
@@ -31,5 +32,6 @@ public static class DependencyInjection
         services.AddScoped<IBaseRepository<UserToken>, BaseRepository<UserToken>>();
         services.AddScoped<IBaseRepository<Role>, BaseRepository<Role>>();
         services.AddScoped<IBaseRepository<UserRole>, BaseRepository<UserRole>>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 }

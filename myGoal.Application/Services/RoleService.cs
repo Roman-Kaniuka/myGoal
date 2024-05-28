@@ -63,7 +63,9 @@ public class RoleService : IRoleService
             };
         }
         
-        await _roleRepository.RemoveAsync(role);
+        _roleRepository.Remove(role);
+        await _roleRepository.SaveChangesAsync();
+        
         return new BaseResult<RoleDto>()
         {
             Date = _mapper.Map<RoleDto>(role)
@@ -83,7 +85,9 @@ public class RoleService : IRoleService
         }
 
         role.Name = dto.Name;
-        await _roleRepository.UpdateAsync(role);
+        _roleRepository.Update(role);
+        await _roleRepository.SaveChangesAsync();
+        
         return new BaseResult<RoleDto>()
         {
             Date = _mapper.Map<RoleDto>(role)

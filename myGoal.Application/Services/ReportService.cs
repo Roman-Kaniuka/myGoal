@@ -170,7 +170,8 @@ public class ReportService : IReportService
                 };
             }
 
-            await _reportRepositotory.RemoveAsync(report);
+            _reportRepositotory.Remove(report);
+            await _reportRepositotory.SaveChangesAsync();
             
             return new BaseResult<ReportDto>()
             {
@@ -207,7 +208,8 @@ public class ReportService : IReportService
             report.Name = dto.Name;
             report.Description = dto.Description;
             
-            await _reportRepositotory.UpdateAsync(report);
+            _reportRepositotory.Update(report);
+            await _reportRepositotory.SaveChangesAsync();
             
             return new BaseResult<ReportDto>()
             {
