@@ -15,12 +15,15 @@ public class RoleService : IRoleService
 {
     private readonly IBaseRepository<Role> _roleRepository;
     private readonly IBaseRepository<User> _userRepository;
+    private readonly IBaseRepository<UserRole> _userRoleRepository;
     private readonly IMapper _mapper;
 
-    public RoleService(IBaseRepository<Role> roleRepository, IBaseRepository<User> userRepository, IMapper mapper)
+    public RoleService(IBaseRepository<Role> roleRepository, IBaseRepository<User> userRepository,
+        IBaseRepository<UserRole> userRoleRepository, IMapper mapper)
     {
         _roleRepository = roleRepository;
         _userRepository = userRepository;
+        _userRoleRepository = userRoleRepository;        
         _mapper = mapper;
     }
 
@@ -84,6 +87,53 @@ public class RoleService : IRoleService
         return new BaseResult<RoleDto>()
         {
             Date = _mapper.Map<RoleDto>(role)
+        };
+    }
+
+    public async Task<BaseResult<UserRoleDto>> AddRoleForUserAsync(UserRoleDto dto)
+    {
+        var user = await _userRepository.GetAll()
+            .Include(x=>x.Roles)
+            .FirstOrDefaultAsync(u => u.Login == dto.Login);
+        if (user == null)
+        {
+            return new BaseResult<UserRoleDto>()
+            {
+                ErrorMessage = ErrorMessage.UserNotFound,
+                ErrorCode = (int)ErrorCodes.UserNotFound
+            };
+        }
+
+        var roles = user.Roles.Select(r => r.Name).ToArray();
+        if (roles.All(x => x != dto.RoleName))
+        {
+            var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Name == dto.RoleName);
+            if (role == null)
+            {
+                return new BaseResult<UserRoleDto>()
+                {
+                    ErrorMessage = ErrorMessage.RoleNotFound,
+                    ErrorCode = (int)ErrorCodes.RoleNotFound
+                };
+            }
+
+            UserRole userRole = new UserRole()
+            {
+                UserId = user.Id,
+                RoleId = role.Id
+            };
+            await _userRoleRepository.CreateAsync(userRole);
+            return new BaseResult<UserRoleDto>()
+            {
+                Date = new UserRoleDto(user.Login, role.Name)
+            };
+        }
+
+        return new BaseResult<UserRoleDto>()
+        {
+            ErrorMessage = ErrorMessage.UserAlreadyExistsThisRole,
+            ErrorCode = (int)ErrorCodes.UserAlreadyExistsThisRole
+
         };
     }
 }

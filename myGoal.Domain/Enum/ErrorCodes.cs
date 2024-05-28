@@ -13,6 +13,7 @@ public enum ErrorCodes
     UserNotFound = 11,
     UserAlreadyExists =12,
     UnauthorizedAccess = 13,
+    UserAlreadyExistsThisRole = 14,
     
     //Password 21-30
     PasswordNotEqualsPasswordConfirm = 21,
@@ -21,5 +22,6 @@ public enum ErrorCodes
     //Role 31-40
     RoleAlreadyExists = 31,
     RoleNotFound = 32,
+    
     
 }

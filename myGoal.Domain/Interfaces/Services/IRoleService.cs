@@ -30,4 +30,11 @@ public interface IRoleService
     /// <returns></returns>
     Task<BaseResult<RoleDto>> UpdateRoleAsync(RoleDto dto);
 
+    /// <summary>
+    /// Присвоєння ролі користувачу
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns></returns>
+    Task<BaseResult<UserRoleDto>> AddRoleForUserAsync(UserRoleDto dto);
+
 }

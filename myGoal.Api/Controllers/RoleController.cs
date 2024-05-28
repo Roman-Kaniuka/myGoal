@@ -107,4 +107,34 @@ public class RoleController : ControllerBase
         }
         return BadRequest(response);
     }
+    
+    //POST
+        
+    /// <summary>
+    /// Присвоєння ролі користувачу
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <remarks>
+    /// Sample request:
+    /// 
+    ///     POST
+    ///     {
+    ///         "login": "User #1",
+    ///         "roleName": "Admin"
+    ///     }
+    /// </remarks>
+    /// <response code="200">Якщо роль було присвоєно</response>
+    /// <response code="400">Якщо роль не було присвоєно</response>
+    [HttpPost("addRole")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<BaseResult<Role>>> AddRoleForUser([FromBody]UserRoleDto dto)
+    {
+        var response = await _roleService.AddRoleForUserAsync(dto);
+        if (response.IsSeccess)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
 }

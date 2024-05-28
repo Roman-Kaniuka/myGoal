@@ -54,4 +54,7 @@
     <data name="RoleNotFound" xml:space="preserve">
         <value>Роль не знайдена</value>
     </data>
+    <data name="UserAlreadyExistsThisRole" xml:space="preserve">
+        <value>Користувач вже має цю роль</value>
+    </data>
 </root>

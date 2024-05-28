@@ -102,7 +102,7 @@
             <response code="200">Якщо звіт був оновлений</response>
             <response code="400">Якщо звіт не був оновлений</response>
         </member>
-        <member name="M:myGoal.Api.Controllers.RoleController.CreateRole(myGoal.Domain.Dto.Role.RoleDto)">
+        <member name="M:myGoal.Api.Controllers.RoleController.CreateRole(myGoal.Domain.Dto.Role.CreateRoleDto)">
             <summary>
             Створення ролі
             </summary>
@@ -150,6 +150,23 @@
             </remarks>
             <response code="200">Якщо роль була оновлена</response>
             <response code="400">Якщо роль не була оновлена</response>
+        </member>
+        <member name="M:myGoal.Api.Controllers.RoleController.AddRoleForUser(myGoal.Domain.Dto.Role.UserRoleDto)">
+            <summary>
+            Присвоєння ролі користувачу
+            </summary>
+            <param name="dto"></param>
+            <remarks>
+            Sample request:
+            
+                POST
+                {
+                    "login": "User #1",
+                    "roleName": "Admin"
+                }
+            </remarks>
+            <response code="200">Якщо роль було присвоєно</response>
+            <response code="400">Якщо роль не було присвоєно</response>
         </member>
         <member name="T:myGoal.Api.Controllers.TokenController">
             <summary>

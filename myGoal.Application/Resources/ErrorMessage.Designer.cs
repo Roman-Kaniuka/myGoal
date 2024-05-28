@@ -159,6 +159,15 @@ namespace myGoal.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Користувач вже має цю роль.
+        /// </summary>
+        internal static string UserAlreadyExistsThisRole {
+            get {
+                return ResourceManager.GetString("UserAlreadyExistsThisRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Користувач не був знайдений.
         /// </summary>
         internal static string UserNotFound {
