@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using myGoal.Domain.Entity;
+using myGoal.Domain.Enum;
 
 namespace myGoal.DAL.Configurations;
 
@@ -17,17 +18,17 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
             new Role()
             {
                 Id = 1,
-                Name = "User"
+                Name = (nameof(Roles.User))
             },
             new Role()
             {
                 Id = 2,
-                Name = "Admin"
+                Name = (nameof(Roles.Admin))
             },
             new Role()
             {
                 Id = 3,
-                Name = "Moderator"
+                Name = (nameof(Roles.Moderator))
             }
         });
     }

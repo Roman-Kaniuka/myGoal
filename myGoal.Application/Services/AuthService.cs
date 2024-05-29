@@ -75,7 +75,7 @@ public class AuthService : IAuthService
                     await _unitOfWork.Users.CreateAsync(user);
                     await _unitOfWork.SaveChangesAsync();
                     
-                    var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Name == "User");
+                    var role = await _roleRepository.GetAll().FirstOrDefaultAsync(r => r.Name == (nameof(Roles.User)));
                     if (role == null)
                     {
                         return new BaseResult<UserDto>()

@@ -170,12 +170,12 @@ public class ReportService : IReportService
                 };
             }
 
-            _reportRepositotory.Remove(report);
+            var removeReport = _reportRepositotory.Remove(report);
             await _reportRepositotory.SaveChangesAsync();
             
             return new BaseResult<ReportDto>()
             {
-                Date = _mapper.Map<ReportDto>(report)
+                Date = _mapper.Map<ReportDto>(removeReport)
             };
 
         }
@@ -208,12 +208,12 @@ public class ReportService : IReportService
             report.Name = dto.Name;
             report.Description = dto.Description;
             
-            _reportRepositotory.Update(report);
+            var updateReport = _reportRepositotory.Update(report);
             await _reportRepositotory.SaveChangesAsync();
             
             return new BaseResult<ReportDto>()
             {
-                Date = _mapper.Map<ReportDto>(report)
+                Date = _mapper.Map<ReportDto>(updateReport)
             };
 
         }
