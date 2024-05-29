@@ -121,9 +121,7 @@ public class AuthService : IAuthService
 
     public async Task<BaseResult<TokenDto>> Login(LoginUserDto dto)
     {
-        try
-        {
-            var user = await _userRepository 
+        var user = await _userRepository 
                 .GetAll()
                 .Include(x=>x.Roles)
                 .FirstOrDefaultAsync(u => u.Login == dto.Login);
@@ -185,17 +183,6 @@ public class AuthService : IAuthService
                     RefreshToken = refreshToken,
                 }
             };
-        }
-        
-        catch (Exception ex)
-        {
-            _logger.Error(ex, ex.Message);
-            return new BaseResult<TokenDto>()
-            {
-                ErrorMessage = ErrorMessage.InternalServerError,
-                ErrorCode = (int)ErrorCodes.InternalServerError
-            };
-        }
     }
     private string HashPassword(string password)
     {
