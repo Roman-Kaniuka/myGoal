@@ -49,6 +49,8 @@ public class RoleService : IRoleService
         };
         
         await _roleRepository.CreateAsync(role);
+        await _roleRepository.SaveChangesAsync();
+        
         return new BaseResult<RoleDto>()
         {
             Date = _mapper.Map<RoleDto>(role)
@@ -130,7 +132,10 @@ public class RoleService : IRoleService
                 UserId = user.Id,
                 RoleId = role.Id
             };
+            
             await _userRoleRepository.CreateAsync(userRole);
+            await _userRoleRepository.SaveChangesAsync();
+            
             return new BaseResult<UserRoleDto>()
             {
                 Date = new UserRoleDto(user.Login, role.Name)

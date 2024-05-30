@@ -109,6 +109,7 @@ public class ReportService : IReportService
         };
 
         await _reportRepositotory.CreateAsync(report);
+        await _reportRepositotory.SaveChangesAsync();
         return new BaseResult<ReportDto>()
         {
             Date = _mapper.Map<ReportDto>(report)

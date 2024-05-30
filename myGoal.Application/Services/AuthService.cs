@@ -164,6 +164,7 @@ public class AuthService : IAuthService
                     RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7)
                 };
                 await _userTokenRepository.CreateAsync(userToken);
+                await _userTokenRepository.SaveChangesAsync();
             }
             
             else
