@@ -1,4 +1,5 @@
 using myGoal.Domain.Dto.Role;
+using myGoal.Domain.Dto.UserRole;
 using myGoal.Domain.Entity;
 using myGoal.Domain.Result;
 
@@ -36,5 +37,19 @@ public interface IRoleService
     /// <param name="dto"></param>
     /// <returns></returns>
     Task<BaseResult<UserRoleDto>> AddRoleForUserAsync(UserRoleDto dto);
+    
+    /// <summary>
+    /// Видалення ролі у користувача
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns></returns>
+    Task<BaseResult<UserRoleDto>> DeleteRoleForUserAsync(DeleteUserRoleDto dto);
+    
+    /// <summary>
+    /// Оновлення ролі у користувача
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <returns></returns>
+    Task<BaseResult<UserRoleDto>> UpdateRoleForUserAsync(UpdateUserRoleDto dto);
 
 }
